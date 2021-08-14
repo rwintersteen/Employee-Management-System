@@ -1,3 +1,0 @@
-SELECT department_id, department.department_name
-FROM employee_role
-JOIN department_name ON employee_role.department_id;
