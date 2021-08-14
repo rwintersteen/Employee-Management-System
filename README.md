@@ -35,4 +35,5 @@ Once the dependencies are installed, open a split command prompt in VS Code and 
 
 After connecting to the employee database using NodeJS, the user can simply scroll through the command prompts using the arrow keys to view all employees or add/update employee roles and more. 
 
-Please see the video below to view the application.
+- [Click on this link to view the application.](https://drive.google.com/file/d/1knq9uCzCGEl9x6eYplp6HUmNLHfLItXJ/view)
+

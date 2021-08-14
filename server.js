@@ -43,6 +43,7 @@ const options = {
         name: "newRoleDepartment"
         },
     ]);
+
     await db.query(`INSERT INTO employee_role SET title = ?, salary = ?, department_id = ?`, [response.newRole, response.newRoleSalary, response.newRoleDepartment]);
     const addRole = await db.query("SELECT * FROM employee_role") 
     console.table(addRole[0])
@@ -82,6 +83,7 @@ const options = {
             name: "employeeManager"
         },
         ]);
+
         await db.query(`INSERT INTO employee SET first_name = ?, last_name = ?, role_id = ?, manager_id = ?`, [response.employeeFirstName, response.employeeLastName, response.employeeRole, response.employeeManager]);
       const employees = await db.query("SELECT * FROM employee");
         console.table(employees[0])
@@ -104,6 +106,7 @@ const options = {
             name: "employeeUpdateRole"
         },
     ]);
+
         await db.query(`UPDATE employee SET role_id = ? WHERE first_name = ? AND last_name = ?`, [response.employeeUpdateRole, response.employeeFirstName, response.employeeLastName]);
         const updateEmployee = await db.query("SELECT * FROM employee") 
         console.table(updateEmployee[0])
@@ -142,14 +145,14 @@ async function dataBaseAction () {
         type: 'list',
         message: 'Which of the following would you like to do',
         choices: [
-            'View department',
-            'View role',
-            'View employees',
-            'Add department',
-            'Add role',
-            'Add employee',
-            'Update employee',
-            'View employee by manager'
+            'viewDepartment',
+            'viewRole',
+            'viewEmployees',
+            'addDepartment',
+            'addRole',
+            'addEmployee',
+            'updateEmployee',
+            'viewEmployeeByManager'
         ],
         name: 'action',
         },
